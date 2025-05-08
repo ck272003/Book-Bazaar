@@ -1,0 +1,69 @@
+Main Source Code Files
+<!-- /project/index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Bazaar</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
+src/main.tsx
+// /project/src/main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
+
+
+src/App.tsx
+// /project/src/App.tsx
+import React from 'react';
+
+function App() {
+  return (
+    <div className="text-center text-xl p-10">
+      <h1 className="font-bold text-3xl text-purple-700">📚 Welcome to Book Bazaar</h1>
+      <p className="mt-4">Your one-stop online bookstore. Buy, sell, and customize books.</p>
+    </div>
+  );
+}
+
+export default App;
+
+
+src/index.css (Tailwind base)
+/* /project/src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+# In your terminal (inside the project folder)
+git init
+git remote add origin https://github.com/your-username/book-bazaar.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+project-structure
+│
+├── index.html          ← Main HTML file
+├── style.css           ← Styling (CSS)
+├── script.js           ← JavaScript for logic/interactions
+├── assets/             ← Images, fonts, icons, etc.
+├── README.md           ← Description and setup instructions
+└── .vscode/            ← VS Code settings (optional)
+
